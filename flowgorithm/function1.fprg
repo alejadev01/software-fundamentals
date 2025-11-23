@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="function1"/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-09 10:07:32 a.&#160;m."/>
+        <attribute name="created" value="aHA7REVTS1RPUC1VOU5ONkNUOzIwMjUtMTEtMDk7MDk6Mzg6MzcgYS7CoG0uOzI4OTc="/>
+        <attribute name="edited" value="aHA7REVTS1RPUC1VOU5ONkNUOzIwMjUtMTEtMDk7MTA6MDc6MzIgYS7CoG0uOzI7Mjk4OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="showMessage()"/>
+        </body>
+    </function>
+    <function name="showMessage" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hello,this is my first function. This is amazing&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="start" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+</flowgorithm>
