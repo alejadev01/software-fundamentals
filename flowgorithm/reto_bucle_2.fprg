@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challeng_script_2_v1"/>
+        <attribute name="authors" value="Usuario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-22 08:45:51 p.&#160;m."/>
+        <attribute name="created" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMTsxMjoyMzoyOCBhLuKAr20uOzExNDQ1"/>
+        <attribute name="edited" value="VXN1YXJpbztERVNLVE9QLTdKVEc4OEI7MjAyNS0xMS0yMTsxMDowMTo0OSBhLuKAr20uOzM7MTE1NTI="/>
+        <attribute name="edited" value="aHA7REVTS1RPUC1VOU5ONkNUOzIwMjUtMTEtMjI7MDg6NDU6NTEgcC7CoG0uOzI7MzAwOQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numlanz" type="Integer" array="False" size=""/>
+            <declare name="conteo" type="Integer" array="False" size=""/>
+            <declare name="dado" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <output expression="&quot;&#191;Cu&#225;ntas veces quieres tirar el dado?&quot;" newline="True"/>
+            <input variable="numlanz"/>
+            <for variable="conteo" start="1" end="numlanz" direction="inc" step="1">
+                <assign variable="dado" expression="random(6)+1"/>
+                <assign variable="suma" expression="suma + dado"/>
+                <output expression="&quot;Lanzamiento  &quot; &amp; conteo &amp; &quot; : &quot; &amp;    dado" newline="True"/>
+            </for>
+            <output expression="&quot;La suma total es :&quot; &amp; suma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
