@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_3"/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 10:25:30 p.&#160;m."/>
+        <attribute name="created" value="aHA7REVTS1RPUC1VOU5ONkNUOzIwMjUtMTEtMjE7MTA6MTE6MjEgcC7CoG0uOzI4ODI="/>
+        <attribute name="edited" value="aHA7REVTS1RPUC1VOU5ONkNUOzIwMjUtMTEtMjE7MTA6MjU6MzAgcC7CoG0uOzE7Mjk5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Ingrese un n&#250;mero POSITIVO o NEGATIVO&quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="abs (num)%2 = 0">
+                <then>
+                    <output expression="&quot;El n&#250;mero es: &quot; &amp; num &amp; &quot; Es PAR&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El n&#250;mero es: &quot; &amp; num &amp; &quot; Es IMPAR&quot;" newline="True"/>
+                </else>
+            </if>
+            <if expression="num &gt;=0">
+                <then>
+                    <output expression="&quot;El n&#250;mero es: &quot; &amp; num &amp; &quot; Es POSITIVO&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;El n&#250;mero es: &quot; &amp; num &amp; &quot; Es NEGATIVO&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
