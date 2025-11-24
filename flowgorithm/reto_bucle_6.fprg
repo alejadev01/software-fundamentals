@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Challege6"/>
+        <attribute name="authors" value="Asus VivoBook"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 11:16:53 p.&#160;m."/>
+        <attribute name="created" value="QXN1cyBWaXZvQm9vaztERVNLVE9QLTJVMTIwQzA7MjAyNS0xMS0yMzsxMDoxNjowNyBwLsKgbS47MzgzMA=="/>
+        <attribute name="edited" value="QXN1cyBWaXZvQm9vaztERVNLVE9QLTJVMTIwQzA7MjAyNS0xMS0yMzsxMDo0MToyMiBwLsKgbS47MTszOTMz"/>
+        <attribute name="edited" value="aHA7REVTS1RPUC1VOU5ONkNUOzIwMjUtMTEtMjM7MTE6MTY6NTMgcC7CoG0uOzE7MzAwMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="respuesta" type="String" array="False" size=""/>
+            <declare name="dado" type="Integer" array="False" size=""/>
+            <declare name="totalTiros" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Integer" array="False" size=""/>
+            <declare name="contPar" type="Integer" array="False" size=""/>
+            <declare name="contImpar" type="Integer" array="False" size=""/>
+            <assign variable="totalTiros" expression="1"/>
+            <assign variable="suma" expression="0"/>
+            <assign variable="contPar" expression="0"/>
+            <assign variable="contImpar" expression="0"/>
+            <assign variable="dado" expression="RANDOM (6)"/>
+            <output expression="&quot;El dado marc&#243;: &quot; &amp; dado" newline="True"/>
+            <output expression="&quot;&#191;Deseas volver a lanzar el dado? (S/N)&quot;" newline="True"/>
+            <input variable="respuesta"/>
+            <while expression="respuesta = &quot;S&quot; OR respuesta = &quot;s&quot;">
+                <assign variable="totalTiros" expression="totalTiros + 1"/>
+                <assign variable="dado" expression="RANDOM (6)"/>
+                <output expression="&quot; Lanzamiento &quot; &amp; totalTiros &amp; &quot; dado igual a &quot; &amp; dado" newline="True"/>
+                <assign variable="suma" expression="suma + dado"/>
+                <output expression="&quot;&#191;Deseas volver a lanzar el dado? (S/N)&quot;" newline="True"/>
+                <input variable="respuesta"/>
+                <if expression="dado % 2 = 0">
+                    <then>
+                        <assign variable="contPar" expression="contPar + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="contImpar" expression="contImpar + 1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;RESULTADO FINAL&quot;" newline="True"/>
+            <output expression="&quot;Total de tiros: &quot; &amp; totalTiros" newline="True"/>
+            <output expression="&quot;Suma total de los tiros: &quot; &amp; suma" newline="True"/>
+            <output expression="&quot;Total de pares: &quot; &amp; contPar" newline="True"/>
+            <output expression="&quot;Total de impares: &quot;&amp; contImpar" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
